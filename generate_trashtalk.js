@@ -8,35 +8,23 @@ function generateTrashtalk() {
     }
     const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-    //define dummy data
+    //假的取值資料
     const options = {
-        occupation: 'designer'
+        occupation: 'engineer'
     }
 
-    console.log(task.engineer)
-
-    for ( let i = 1; i <= task.length; i++) {
-        if ( task[i] !== options.occupation ) {
-            console.log(task[i])
+    //比對取值是否相同
+    let trashtalk = ''
+    for (let prop in task) {
+        if (prop === options.occupation) {
+            const taskIndex = Math.floor(Math.random() * task[prop].length)
+            const phraseIndex = Math.floor(Math.random() * phrase.length)
+            trashtalk += `身為一個${prop}，${task[prop][taskIndex]}，${phrase[phraseIndex]}吧!`
+            console.log(trashtalk)
         }
     }
-
-
-    // create a collection to store things user picked up
-    let collection = []
-    // start generating password
-    //define sample function to randomly reture an item in an array
-    function sample(task) {
-        const index = Math.floor(Math.random()* task.length)
-        return array[index]
-    }
-
-
-    // return the generated password
-    
-
-    console.log('THis fuction will generate trash talk')
-
+    // return the generated trashtalk
+    // return password
 }
 
 //invoke generateTrashtalk function
