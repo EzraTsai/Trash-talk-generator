@@ -16,19 +16,8 @@ function generateTrashtalk(options) {
             trashtalk += `身為一個${prop}，${task[prop][taskIndex]}，${phrase[phraseIndex]}吧!`
         }
     }
-    // return error notice if collection is empty
-    if (trashtalk.length === 0) {
-        return 'There is no valid characters in your selection.'
-    }
     // return the generated trashtalk
     return trashtalk
 }
 // export generatePassword function for other files to use
 module.exports = generateTrashtalk
-
-
-
-
-// if (prop === options.occupation)
-
-// if (prop === Object.keys(options).toString())
