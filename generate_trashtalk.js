@@ -16,6 +16,10 @@ function generateTrashtalk(options) {
             trashtalk += `身為一個${prop}，${task[prop][taskIndex]}，${phrase[phraseIndex]}吧!`
         }
     }
+    // return error notice if collection is empty
+    if (trashtalk.length === 0) {
+        return 'Please select a valid character.'
+    }
     // return the generated trashtalk
     return trashtalk
 }
