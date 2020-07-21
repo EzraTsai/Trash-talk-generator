@@ -1,6 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const generateTrashTalk = require('./generate_trashtalk')
 const app = express()
 const port = 3000
 
@@ -17,8 +18,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-    res.render('index')
-    console.log('req.body', req.body)
+    const options = req.body
+    const trashtalk = generateTrashTalk(options)
+    res.render('index', { trashtalk: trashtalk, options: options })
 })
 
 //start express server and listening for connections
