@@ -1,1 +1,126 @@
-<h1>This is for test only</h1>
+<!--  ./views/index.handlebars -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="d-flex justify-content-center align-items-center font-weight-bolder">
+                        你想對誰說幹話?
+                        <i class="fas fa-bullhorn ml-3"></i>
+                        <i class="fas fa-bullhorn"></i>
+                        <i class="fas fa-bullhorn"></i>
+                    </h3>
+                    <hr>
+                    <form method="POST" action="/">
+                        <div class="d-flex justify-content-around">
+                            <div class="card mx-3 shadow" style="width: 18rem;">
+                                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                                    width="100%" class="card-img-top" alt="image">
+                                <div class="card-body row justify-content-center align-items-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="engineer"
+                                            value="option1">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            工程師
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mx-3 shadow" style="width: 18rem;">
+                                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                                    width="100%" class="card-img-top " alt="image">
+
+                                <div class="card-body row justify-content-center align-items-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="desinger"
+                                            value="option1">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            設計師
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mx-3 shadow" style="width: 18rem;">
+                                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                                    width="100%" class="card-img-top " alt="image">
+                                <div class="card-body row justify-content-center align-items-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="entrepreneur" value="option1">
+                                        <label class="form-check-label" for="exampleRadios3">
+                                            創業家
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-row my-4 mx-3">
+                            <button class="btn btn-success mr-5" type="submit">產生幹話</button>
+                            <div class="col-md-8">
+                                <div type="text" name="excludeCharacters" class="form-control"
+                                    id="exclude-characters">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- <div class="container py-5">
+    <h1 class="d-flex justify-content-center">你想對誰說幹話?</h1>
+    <form method="POST" action="/">
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                    class="card-img-top rounded" alt="engineer">
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="engineer" value="option1"
+                            checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            工程師
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                    class="card-img-top rounded" alt="desinger">
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="desinger" value="option1">
+                        <label class="form-check-label" for="exampleRadios2">
+                            設計師
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                    class="card-img-top rounded" alt="entrepreneur">
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="entrepreneur"
+                            value="option1">
+                        <label class="form-check-label" for="exampleRadios3">
+                            創業家
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-success" type="submit">產生幹話</button>
+        <div class="form-group form-row">
+            <label for="exclude-characters" class="col-md-4 col-form-label">
+                Exclude Characters
+            </label>
+            <div class="col-md-8">
+                <input type="text" name="excludeCharacters" class="form-control" id="exclude-characters">
+                <small class="text-muted form-text">These characters will not appear in the passwrod</small>
+            </div>
+        </div>
+    </form>
+</div> --}}
