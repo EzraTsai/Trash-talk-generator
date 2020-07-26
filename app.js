@@ -2,6 +2,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const generateTrashTalk = require('./generate_trashtalk')
+const Handlebars = require('handlebars')
 const app = express()
 const port = 3000
 
@@ -11,6 +12,14 @@ app.set('view engine', 'handlebars')
 
 //setting body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
+
+//setting handlebars helper
+Handlebars.registerHelper('checkIfSame', function(occupation, currentOccupation, options) {
+    if (occupation === currentOccupation) {
+        return options.fn(this)
+    } 
+    return options.inverse(this)
+})
 
 //route setting
 app.get('/', (req, res) => {

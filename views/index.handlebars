@@ -19,7 +19,7 @@
                                 <div class="card-body row justify-content-center align-items-center">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="occupation" id="engineer"
-                                            value="engineer">
+                                            value="engineer" {{#checkIfSame occupation 'enginner'}} checked {{/checkIfSame}}>
                                         <label class="form-check-label" for="exampleRadios1" >
                                             工程師
                                         </label>
@@ -33,7 +33,7 @@
                                 <div class="card-body row justify-content-center align-items-center">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="occupation" id="desinger"
-                                            value="designer">
+                                            value="designer"{{#checkIfSame occupation 'designer'}} checked {{/checkIfSame}}>
                                         <label class="form-check-label" for="exampleRadios2">
                                             設計師
                                         </label>
@@ -46,7 +46,7 @@
                                 <div class="card-body row justify-content-center align-items-center">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="occupation"
-                                            id="entrepreneur" value="entrepreneur">
+                                            id="entrepreneur" value="entrepreneur" {{#checkIfSame occupation 'entrepreneur'}} checked {{/checkIfSame}}>
                                         <label class="form-check-label" for="exampleRadios3">
                                             創業家
                                         </label>
