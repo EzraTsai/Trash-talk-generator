@@ -1,7 +1,6 @@
 //define generateTrashtalk function
-function generateTrashtalk(options) {
+function generateTrashtalk(occupation) {
     // define things user might want
-
     const target = {
         engineer: '工程師',
         designer: '設計師',
@@ -15,13 +14,11 @@ function generateTrashtalk(options) {
     const phrase = ['很簡單', '很容易', '很快', '很正常']
     //比對取值是否相同
     let trashtalk = ''
-    for (let prop in target) {
-        if (prop === options.occupation) {
-            const taskIndex = Math.floor(Math.random() * task[prop].length)
+        if (occupation) {
+            const taskIndex = Math.floor(Math.random() * task[occupation].length)
             const phraseIndex = Math.floor(Math.random() * phrase.length)
-            trashtalk += `身為一個${target[prop]}，${task[prop][taskIndex]}，${phrase[phraseIndex]}吧!`
+            trashtalk += `身為一個${target[occupation]}，${task[occupation][taskIndex]}，${phrase[phraseIndex]}吧!`
         }
-    }
     // return error notice if collection is empty
     if (trashtalk.length === 0) {
         return 'Please select a valid character.'
